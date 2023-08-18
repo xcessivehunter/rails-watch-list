@@ -1,0 +1,10 @@
+<div class="w3-container">
+  <h1>Lists </h1>
+  <br>
+  <h2><%= @list.name %></h2>
+</div>
+<%= simple_form_for [@list, @bookmark] do |form| %>
+  <%= form.input :comment %>
+  <%= form.association :movie %>
+  <%= form.button :submit, class: "btn btn-primary" %>
+<% end %>
